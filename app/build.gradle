@@ -1,32 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    testOptions {
-        unitTests {
-            includeAndroidResources = true
-        }
-    }
-    lintOptions {
-        disable 'ObsoleteSdkInt'
-        disable 'GoogleAppIndexingWarning'
-        warningsAsErrors = true
-    }
+
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "edu.ucsd.cse110.myapplication"
+        applicationId "edu.ucsd.cse110.testprojecy"
         minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
+
 }
 
 dependencies {
